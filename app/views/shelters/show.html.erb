@@ -6,6 +6,8 @@
   <%= @shelter.address %>
   <br>
   <%= @shelter.city %>,
-  <%= @shelter.state %> 
+  <%= @shelter.state %>
   <%= @shelter.zip %>
 </p>
+<p>
+  <a href="/shelters/<%= @shelter.id %>/edit">Edit Shelter</a>
