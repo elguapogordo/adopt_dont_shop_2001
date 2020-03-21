@@ -11,3 +11,6 @@
 </p>
 <p>
   <a href="/shelters/<%= @shelter.id %>/edit">Edit Shelter</a>
+  <%= button_to "Edit Shelter", "/shelters/#{@shelter.id}/edit", method: :get %>
+  <br>
+  <%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
