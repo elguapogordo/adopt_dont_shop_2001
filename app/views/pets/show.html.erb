@@ -10,3 +10,5 @@
 </ul>
 <br>
 <a href="/pets/<%= @pet.id %>/edit">Update Pet</a>
+<br>
+<%= button_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
