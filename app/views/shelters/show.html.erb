@@ -10,6 +10,8 @@
   <%= @shelter.zip %>
 </p>
 <p>
+  <a href="/shelters/<%= @shelter.id %>/pets">Pets</a>
+  <br>
   <a href="/shelters/<%= @shelter.id %>/edit">Edit Shelter</a>
   <%= button_to "Edit Shelter", "/shelters/#{@shelter.id}/edit", method: :get %>
   <br>
