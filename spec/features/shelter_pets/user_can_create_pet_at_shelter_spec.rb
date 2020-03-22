@@ -10,9 +10,7 @@ RSpec.describe "as a visitor", type: :feature do
 
     visit "shelters/#{shelter1.id}/pets"
 
-    expect(page).to have_content('Create Pet')
-
-    visit "/shelters/#{shelter1.id}/pets/new"
+    click_on "Create Pet"
 
     fill_in :name, with: "Bailey"
     fill_in :sex, with: "female"
