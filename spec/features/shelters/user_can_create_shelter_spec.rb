@@ -10,18 +10,9 @@ RSpec.describe "as a visitor", type: :feature do
 
     visit "/shelters/"
 
-    expect(page).to have_link(shelter1.name)
-    expect(page).to have_link 'New Shelter', href: '/shelters/new'
-
     click_link "New Shelter"
 
     expect(current_path).to eq ("/shelters/new")
-    expect(page).to have_field :name
-    expect(page).to have_field :address
-    expect(page).to have_field :city
-    expect(page).to have_field :state
-    expect(page).to have_field :zip
-    expect(page).to have_button "Create Shelter"
 
     fill_in :name, with: "Shiny Shelter"
     fill_in :address, with: "321 Countdown Timer"

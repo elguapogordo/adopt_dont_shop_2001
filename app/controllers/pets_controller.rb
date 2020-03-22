@@ -10,4 +10,17 @@ class PetsController < ApplicationController
     @pet = Pet.find(params["id"])
   end
 
+  def new
+  end
+
+  def create
+    Pet.create(pet_params)
+    redirect_to '/pets'
+  end
+
+  private
+  def pet_params
+    params.permit(:name, :sex, :age, :description, :image, :id)
+  end
+
 end
